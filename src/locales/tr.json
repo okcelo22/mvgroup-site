@@ -4,18 +4,10 @@
         "home": "Ana Sayfa",
         "about": "Hakkımızda",
         "services": "Hizmetler",
-        "projects": "Projelerimiz",
         "blog": "Blog",
         "contact": "İletişim",
         "lang_en": "EN",
-        "lang_tr": "TR",
-        "services_dropdown": {
-          "construction": "İnşaat & Emlak",
-          "automotive": "Otomotiv",
-          "supply_chain": "Tedarik Zinciri Yönetimi",
-          "food_restaurant": "Gıda & Restoran Yönetimi",
-          "jewelry": "Mücevherat"
-        }
+        "lang_tr": "TR"
       },
       "footer": {
         "logo_text": "İnovasyon, Güven ve Büyüme. Çeşitli sektörlerde üstün çözümler sunuyoruz.",
@@ -25,7 +17,9 @@
         "newsletter_placeholder": "E-postanızı girin",
         "subscribe": "Abone Ol",
         "follow_us": "Bizi Takip Edin",
-        "copyright": "© {{year}} MV Group. Tüm hakları saklıdır."
+        "copyright": "Tüm hakları saklıdır.",
+        "newsletter_success_title": "Abone Olundu!",
+        "newsletter_success_desc": "{{email}} ile bültenimize abone olduğunuz için teşekkürler."
       },
       "homePage": {
         "hero_slogan": "İnovasyon, Güven ve Büyüme",
@@ -33,14 +27,12 @@
         "contact_us_btn": "Bize Ulaşın",
         "discover_more_btn": "Daha Fazlasını Keşfet",
         "about_preview_title": "MV Group Hakkında",
-        "about_preview_text": "MV Group; inşaat, emlak, otomotiv, tedarik zinciri yönetimi, gıda ve restoran yönetimi ve mücevherat sektörlerinde yenilikçi çözümler sunmaya kendini adamıştır. Her girişimimizde mükemmellik ve müşteri memnuniyeti için çalışıyoruz.",
+        "about_preview_text": "MV Group; inşaat, emlak, otomotiv, gıda ve restoran yönetimi ve mücevherat sektörlerinde yenilikçi çözümler sunmaya kendini adamıştır. Her girişimimizde mükemmellik ve müşteri memnuniyeti için çalışıyoruz.",
         "learn_more_about_us_link": "Hakkımızda Daha Fazla Bilgi Edinin",
         "core_services_title": "Temel Hizmetlerimiz",
+        "featured_services_title": "Öne Çıkan Hizmetlerimiz",
         "learn_more_btn": "Daha Fazla Bilgi",
         "view_all_services_btn": "Tüm Hizmetleri Görüntüle",
-        "featured_projects_title": "Öne Çıkan Projeler",
-        "view_details_btn": "Detayları Görüntüle",
-        "explore_all_projects_btn": "Tüm Projeleri Keşfet",
         "why_partner_title": "Neden MV Group ile Ortak Olmalısınız?",
         "proven_expertise_title": "Kanıtlanmış Uzmanlık",
         "proven_expertise_desc": "Farklı sektörlerde başarılı projeler sunma konusunda yılların deneyimi.",
@@ -54,11 +46,28 @@
         "services_highlights": {
           "construction_desc": "Çağdaş, zarif ve fonksiyonel mekanlar.",
           "automotive_desc": "Performans ve zarafetle premium otomotiv çözümleri.",
-          "supply_chain_desc": "Verimli, güvenli ve stratejik lojistik.",
           "food_restaurant_desc": "Mutfak yeniliğiyle benzersiz yemek deneyimleri.",
           "jewelry_desc": "Seçkin işçilik ve zamansız zarafet."
         },
-        "featured_projects_sample_desc": "Projenin temel özelliklerini ve başarısını vurgulayan kısa bir açıklama."
+        "stats_section_title": "Rakamlarla Etkimiz",
+        "stat_clients_served_label": "Hizmet Verilen Müşteri",
+        "stat_projects_completed_label": "Küresel Operasyonlar",
+        "stat_team_members_label": "Uzman Ekip",
+        "stat_years_experience_label": "Yıllık Deneyim",
+        "stat_clients_served_value": "500+",
+        "stat_projects_completed_value": "20+",
+        "stat_team_members_value": "150+",
+        "stat_years_experience_value": "10+",
+        "testimonials_title": "Müşterilerimiz Ne Diyor?",
+        "testimonial_1_text": "\"MV Group'un adanmışlığı ve uzmanlığı projemizin başarısında kritik rol oynadı. Yenilikçi yaklaşımları ve detaylara verdikleri önem olağanüstüydü.\"",
+        "testimonial_1_author": "Ali Yılmaz, Teknoloji Çözümleri CEO'su",
+        "testimonial_1_company": "Teknoloji Çözümleri Ltd.",
+        "testimonial_2_text": "\"MV Group ile çalışmak kusursuz bir deneyimdi. Vizyonumuzu anladılar ve beklentilerimizin ötesine geçtiler. Kesinlikle tavsiye ederim!\"",
+        "testimonial_2_author": "Ayşe Demir, Kreatif Tasarımlar Direktörü",
+        "testimonial_2_company": "Kreatif Tasarımlar A.Ş.",
+        "testimonial_3_text": "\"MV Group'un gösterdiği profesyonellik ve bağlılık olağanüstüydü. Sürekli olarak yüksek kaliteli işler ve değerli analizler sundular.\"",
+        "testimonial_3_author": "Mehmet Kaya, Kentsel Gelişim Kurucusu",
+        "testimonial_3_company": "Kentsel Gelişim Şti."
       },
       "aboutPage": {
         "title": "<1>MV Group</1> Hakkında",
@@ -79,19 +88,13 @@
         "journey_2015_title": "Genişleme",
         "journey_2015_desc": "Faaliyetlerini emlak ve otomotiv sektörlerine genişletti.",
         "journey_2020_title": "Çeşitlendirme",
-        "journey_2020_desc": "Tedarik zinciri, gıda ve mücevherat pazarlarına girerek önemli bir büyüme kaydetti.",
+        "journey_2020_desc": "Gıda ve mücevherat pazarlarına girerek önemli bir büyüme kaydetti.",
         "journey_present_title": "Küresel Erişim",
         "journey_present_desc": "Yenilikçilik ve müşteri memnuniyeti taahhüdüyle küresel olarak faaliyet göstermektedir.",
-        "leadership_title": "Liderlerimizle Tanışın",
-        "team_member_ceo_name": "Can Doğan",
+        "leadership_title": "Liderimizle Tanışın",
+        "team_member_ceo_name": "Muzaffer Vurgun",
         "team_member_ceo_title": "CEO & Kurucu",
-        "team_member_ceo_bio": "Yeniliği yönlendiren 20+ yıllık deneyime sahip vizyoner lider.",
-        "team_member_coo_name": "Ayşe Yılmaz",
-        "team_member_coo_title": "Operasyon Direktörü",
-        "team_member_coo_bio": "Operasyonel mükemmellik ve stratejik planlama uzmanı.",
-        "team_member_cto_name": "Mehmet Kaya",
-        "team_member_cto_title": "Teknoloji Lideri",
-        "team_member_cto_bio": "İş büyümesi için teknolojiyi kullanma konusunda tutkulu."
+        "team_member_ceo_bio": "Çeşitli sektörlerde inovasyonu ve stratejik büyümeyi yönlendiren kapsamlı deneyime sahip vizyoner lider."
       },
       "servicesPage": {
         "title": "Kapsamlı <1>Hizmetlerimiz</1>",
@@ -110,13 +113,6 @@
         "automotive_detail3": "Bakım ve Servis",
         "automotive_detail4": "Filo Yönetimi Çözümleri",
         "automotive_detail5": "Elektrikli ve Hibrit Araç Uzmanlığı",
-        "supply_chain_title": "Tedarik Zinciri Yönetimi",
-        "supply_chain_desc": "En yüksek hizmet ve karlılık standartlarını sağlayan verimli, güvenli ve stratejik lojistik çözümleri. Teknoloji ve küresel ağlardan yararlanarak tedarik zincirinizi uçtan uca optimize ediyoruz.",
-        "supply_chain_detail1": "Küresel Nakliye Organizasyonu",
-        "supply_chain_detail2": "Depolama ve Dağıtım",
-        "supply_chain_detail3": "Envanter Yönetimi",
-        "supply_chain_detail4": "Gümrük Müşavirliği",
-        "supply_chain_detail5": "Son Mil Teslimat Çözümleri",
         "food_restaurant_title": "Gıda & Restoran Yönetimi",
         "food_restaurant_desc": "Geleneksel tatları modern mutfak yeniliğiyle harmanlayarak benzersiz yemek deneyimleri sunuyoruz. Portföyümüz, tamamı kalite ve misafirperverliğe odaklanmış kaliteli yemek mekanları, gündelik restoranlar ve catering hizmetlerini içermektedir.",
         "food_restaurant_detail1": "Restoran Konsept Geliştirme",
@@ -132,29 +128,6 @@
         "jewelry_detail4": "Etik Kaynaklı Malzemeler",
         "jewelry_detail5": "Saat Koleksiyonları ve Servisi",
         "inquire_btn": "{{serviceName}} Hakkında Bilgi Alın"
-      },
-      "projectsPage": {
-        "title": "<1>Projelerimiz</1>",
-        "intro_text": "Çeşitli sektörlerde kalite, yenilikçilik ve müşteri memnuniyetine olan bağlılığımızı sergileyen başarıyla tamamlanmış projelerimizden bir seçkiyi keşfedin.",
-        "search_placeholder": "Proje ara...",
-        "filter_all": "Tümü",
-        "completed_on": "Tamamlanma: {{date}}",
-        "no_projects_found": "Kriterlerinize uygun proje bulunamadı. Aramanızı veya filtrenizi değiştirmeyi deneyin."
-      },
-      "projectDetailPage": {
-        "project_not_found_title": "Proje Bulunamadı",
-        "project_not_found_desc": "Aradığınız proje mevcut değil veya taşınmış olabilir.",
-        "back_to_projects_btn": "Projelere Geri Dön",
-        "overview_title": "Projeye Genel Bakış",
-        "features_title": "Temel Özellikler",
-        "details_title": "Proje Detayları",
-        "sector_label": "Sektör:",
-        "completion_label": "Tamamlanma:",
-        "client_label": "Müşteri:",
-        "feedback_title": "Müşteri Geri Bildirimi",
-        "feedback_text": "\"MV Group, kalite ve zamanlama konusunda beklentilerimizi aşan olağanüstü sonuçlar verdi. Profesyonellikleri olağanüstüydü.\"",
-        "feedback_client": "- Memnun Müşteri",
-        "gallery_title": "Proje Galerisi"
       },
       "blogPage": {
         "title": "<1>Blogumuz</1>",
@@ -188,36 +161,6 @@
         "description": "Hay Aksi! Aradığınız sayfa mevcut görünmüyor. Taşınmış veya silinmiş olabilir.",
         "go_home_btn": "Ana Sayfaya Dön"
       },
-      "projectData": {
-        "azure_towers_title": "Azure Konut Kuleleri",
-        "azure_towers_desc": "Son teknoloji olanaklara ve sürdürülebilir tasarıma sahip bir dönüm noktası niteliğinde konut projesi.",
-        "azure_towers_detail_desc": "Son teknoloji olanaklara ve sürdürülebilir tasarıma sahip bir dönüm noktası niteliğinde konut projesi. Bu proje, karmaşık mimari planlama ve uygulamayı içeriyordu ve şehrin siluetine ikonik bir katkı sağladı. 500'den fazla lüks daire, perakende alanı ve geniş yeşil alanlar içermektedir.",
-        "azure_towers_client": "Şehir Geliştirme Ltd.",
-        "azure_towers_feature1": "Sürdürülebilir Tasarım",
-        "azure_towers_feature2": "Lüks Olanaklar",
-        "azure_towers_feature3": "Akıllı Ev Entegrasyonu",
-        "azure_towers_feature4": "Topluluk Alanları",
-        "velocity_hub_title": "Velocity Otomotiv Merkezi",
-        "velocity_hub_desc": "Lüks ve performans araçları için satış ve gelişmiş servis hizmetleri sunan birinci sınıf bir merkez.",
-        "velocity_hub_detail_desc": "Lüks ve performans araçları için satış ve gelişmiş servis hizmetleri sunan birinci sınıf bir merkez. Merkezde son teknoloji bir showroom, çok sayıda servis alanı ve bir müşteri salonu bulunmaktadır.",
-        "velocity_hub_client": "Prestige Motors A.Ş.",
-        "velocity_hub_feature1": "Gelişmiş Teşhis",
-        "velocity_hub_feature2": "Sertifikalı Teknisyenler",
-        "velocity_hub_feature3": "Lüks Showroom",
-        "velocity_hub_feature4": "Özelleştirme Hizmetleri",
-        "logistics_center_title": "Küresel Lojistik Merkezi",
-        "logistics_center_desc": "Küresel tedarik zincirlerini verimlilik ve hassasiyetle kolaylaştıran teknolojik olarak gelişmiş bir merkez.",
-        "gourmet_table_title": "Gurme Sofrası",
-        "gourmet_table_desc": "Yenilikçi mutfağı ve olağanüstü bir yemek deneyimi sunan ödüllü bir restoran.",
-        "elysian_jewels_title": "Elysian Mücevher Koleksiyonu",
-        "elysian_jewels_desc": "Zamansız zarafeti ve usta işçiliği sergileyen, el yapımı mücevherlerden oluşan çarpıcı bir koleksiyon.",
-        "greentech_office_title": "GreenTech Ofis Parkı",
-        "greentech_office_desc": "Verimlilik ve refah için tasarlanmış, sürdürülebilir teknolojilere sahip çevre dostu bir ofis parkı.",
-        "artisan_bakery_title": "Artizan Fırın Zinciri",
-        "artisan_bakery_desc": "Yüksek kaliteli, el yapımı ekmekleri ve hamur işleriyle tanınan popüler bir fırın zinciri.",
-        "precision_parts_title": "Hassas Parça Üretimi",
-        "precision_parts_desc": "Önde gelen üreticiler için yüksek hassasiyetli otomotiv bileşenleri üreten son teknoloji bir tesis."
-      },
       "blogData": {
         "sustainable_construction_title": "Sürdürülebilir İnşaatın Geleceği",
         "sustainable_construction_author": "MV Group Analizleri",
@@ -225,9 +168,6 @@
         "automotive_landscape_title": "Gelişen Otomotiv Ortamında Yol Almak",
         "automotive_landscape_author": "Sektör Uzmanı",
         "automotive_landscape_excerpt": "Elektrikli araçlardan otonom sürüşe kadar otomotiv sektöründeki güncel trendlerin bir analizi.",
-        "supply_chain_optimization_title": "Pandemi Sonrası Dünyada Tedarik Zincirlerini Optimize Etmek",
-        "supply_chain_optimization_author": "Lojistik Ekibi",
-        "supply_chain_optimization_excerpt": "Yeni küresel zorluklar karşısında dirençli ve verimli tedarik zincirleri oluşturma stratejileri.",
         "culinary_trends_title": "Mutfak Trendleri: 2025'te Neler Beklenmeli?",
         "culinary_trends_author": "Şef Anton",
         "culinary_trends_excerpt": "Bitki bazlı yeniliklerden hiper-yerel kaynak kullanımına kadar yükselen gıda trendlerine bir bakış."
@@ -235,7 +175,6 @@
       "sectors": {
         "construction_real_estate": "İnşaat & Emlak",
         "automotive": "Otomotiv",
-        "supply_chain_management": "Tedarik Zinciri Yönetimi",
         "food_restaurant_management": "Gıda & Restoran Yönetimi",
         "jewelry": "Mücevherat"
       }

@@ -15,7 +15,6 @@
       const allProjects = [
         { id: 1, titleKey: 'projectData.azure_towers_title', sectorKey: 'sectors.construction_real_estate', date: '2023-05-15', imageText: 'Tall modern residential towers with blue glass facade', descriptionKey: 'projectData.azure_towers_desc' },
         { id: 2, titleKey: 'projectData.velocity_hub_title', sectorKey: 'sectors.automotive', date: '2022-11-20', imageText: 'Spacious and modern car dealership showroom interior', descriptionKey: 'projectData.velocity_hub_desc' },
-        { id: 3, titleKey: 'projectData.logistics_center_title', sectorKey: 'sectors.supply_chain_management', date: '2024-01-10', imageText: 'Aerial view of a large logistics center with many trucks', descriptionKey: 'projectData.logistics_center_desc' },
         { id: 4, titleKey: 'projectData.gourmet_table_title', sectorKey: 'sectors.food_restaurant_management', date: '2023-09-05', imageText: 'Elegant fine dining restaurant interior with well-set tables', descriptionKey: 'projectData.gourmet_table_desc' },
         { id: 5, titleKey: 'projectData.elysian_jewels_title', sectorKey: 'sectors.jewelry', date: '2023-12-01', imageText: 'Display case with exquisite diamond and gemstone jewelry pieces', descriptionKey: 'projectData.elysian_jewels_desc' },
         { id: 6, titleKey: 'projectData.greentech_office_title', sectorKey: 'sectors.construction_real_estate', date: '2022-08-20', imageText: 'Modern office buildings surrounded by green landscaping', descriptionKey: 'projectData.greentech_office_desc'},
@@ -34,8 +33,10 @@
       const [searchTerm, setSearchTerm] = useState('');
 
       useEffect(() => {
-        window.scrollTo(0, 0);
-      }, [location.pathname, language]);
+        if (!location.hash) {
+          window.scrollTo(0, 0);
+        }
+      }, [location.pathname, language, location.hash]);
 
       const filteredProjects = allProjects.filter(project => {
         const projectTitle = t(project.titleKey);

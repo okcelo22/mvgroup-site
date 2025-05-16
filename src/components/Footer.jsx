@@ -1,13 +1,17 @@
 
     import React from 'react';
     import { Link } from 'react-router-dom';
-    import { Input } from '@/components/ui/input';
     import { Button } from '@/components/ui/button';
+    import { Input } from '@/components/ui/input';
     import { Facebook, Twitter, Instagram, Linkedin, Youtube } from 'lucide-react';
     import { useLanguage } from '@/i18n';
+    import { useToast } from "@/components/ui/use-toast";
+
+    const LOGO_URL = "https://storage.googleapis.com/hostinger-horizons-assets-prod/fb3259d9-1449-4d66-aa17-dd265cdacdd0/3ff8cac098d1bd5a3d2034c39d7e9912.png";
 
     const Footer = () => {
       const { t } = useLanguage();
+      const { toast } = useToast();
       const currentYear = new Date().getFullYear();
 
       const quickLinks = [
@@ -19,31 +23,40 @@
       ];
 
       const socialLinks = [
-        { Icon: Facebook, href: '#', name: 'Facebook' },
-        { Icon: Twitter, href: '#', name: 'Twitter' },
-        { Icon: Instagram, href: '#', name: 'Instagram' },
-        { Icon: Linkedin, href: '#', name: 'LinkedIn' },
-        { Icon: Youtube, href: '#', name: 'YouTube' },
+        { Icon: Facebook, href: 'https://facebook.com', label: 'Facebook' },
+        { Icon: Twitter, href: 'https://twitter.com', label: 'Twitter' },
+        { Icon: Instagram, href: 'https://instagram.com', label: 'Instagram' },
+        { Icon: Linkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
+        { Icon: Youtube, href: 'https://youtube.com', label: 'YouTube' },
       ];
 
+      const handleNewsletterSubmit = (e) => {
+        e.preventDefault();
+        const email = e.target.email.value;
+        toast({
+          title: t('footer.newsletter_success_title'),
+          description: t('footer.newsletter_success_desc', { email }),
+        });
+        e.target.reset();
+      };
+
       return (
-        <footer className="bg-gray-50 dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-300">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <footer className="bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 pt-16 pb-8">
+          <div className="container mx-auto px-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
               <div>
                 <Link to="/" className="flex items-center mb-4">
-                  <img  className="h-8 w-auto" alt="MV Group Logo Small" src="https://images.unsplash.com/photo-1694718891501-99ab366bac75" />
-                  <span className="ml-2 text-xl font-semibold text-gray-800 dark:text-white">MV Group</span>
+                  <img  className="h-12 w-auto" alt="MV Group Logo" src={LOGO_URL} />
                 </Link>
-                <p className="text-sm">{t('footer.logo_text')}</p>
+                <p className="text-sm leading-relaxed">{t('footer.logo_text')}</p>
               </div>
 
               <div>
-                <h5 className="text-lg font-semibold text-gray-800 dark:text-white mb-4">{t('footer.quick_links')}</h5>
+                <p className="font-semibold text-gray-800 dark:text-white mb-4">{t('footer.quick_links')}</p>
                 <ul className="space-y-2">
                   {quickLinks.map(link => (
                     <li key={link.name}>
-                      <Link to={link.path} className="hover:text-blue-500 dark:hover:text-blue-400 transition-colors">
+                      <Link to={link.path} className="hover:text-blue-500 dark:hover:text-blue-400 transition-colors duration-300 text-sm">
                         {link.name}
                       </Link>
                     </li>
@@ -52,34 +65,28 @@
               </div>
 
               <div>
-                <h5 className="text-lg font-semibold text-gray-800 dark:text-white mb-4">{t('footer.newsletter')}</h5>
+                <p className="font-semibold text-gray-800 dark:text-white mb-4">{t('footer.newsletter')}</p>
                 <p className="text-sm mb-3">{t('footer.newsletter_desc')}</p>
-                <form className="flex space-x-2">
-                  <Input type="email" placeholder={t('footer.newsletter_placeholder')} className="flex-grow" aria-label="Email for newsletter"/>
-                  <Button type="submit" className="bg-blue-500 hover:bg-blue-600 text-white">{t('footer.subscribe')}</Button>
+                <form onSubmit={handleNewsletterSubmit} className="flex space-x-2">
+                  <Input type="email" name="email" placeholder={t('footer.newsletter_placeholder')} className="flex-grow dark:bg-gray-700 dark:border-gray-600" required aria-label={t('footer.newsletter_placeholder')} />
+                  <Button type="submit" className="bg-blue-600 hover:bg-blue-700 text-white">{t('footer.subscribe')}</Button>
                 </form>
               </div>
-              
+
               <div>
-                <h5 className="text-lg font-semibold text-gray-800 dark:text-white mb-4">{t('footer.follow_us')}</h5>
+                <p className="font-semibold text-gray-800 dark:text-white mb-4">{t('footer.follow_us')}</p>
                 <div className="flex space-x-4">
                   {socialLinks.map(social => (
-                    <a key={social.name} href={social.href} target="_blank" rel="noopener noreferrer" aria-label={social.name}
-                       className="text-gray-500 hover:text-blue-500 dark:text-gray-400 dark:hover:text-blue-400 transition-colors">
+                    <a key={social.label} href={social.href} target="_blank" rel="noopener noreferrer" aria-label={social.label} className="text-gray-500 hover:text-blue-500 dark:text-gray-400 dark:hover:text-blue-400 transition-colors duration-300">
                       <social.Icon className="h-6 w-6" />
                     </a>
                   ))}
                 </div>
-                 <div className="mt-6">
-                    <p className="text-sm">mvgrup.net@gmail.com</p>
-                    <p className="text-sm">+90 532 511 6263</p>
-                    <p className="text-sm">+1 802 777 7377</p>
-                </div>
               </div>
             </div>
 
-            <div className="mt-12 border-t border-gray-200 dark:border-gray-700 pt-8 text-center">
-              <p className="text-sm">{t('footer.copyright', { year: currentYear })}</p>
+            <div className="border-t border-gray-300 dark:border-gray-700 pt-8 text-center text-sm">
+              <p>&copy; {currentYear} MV Group. {t('footer.copyright', { year: currentYear })}</p>
             </div>
           </div>
         </footer>

@@ -1,14 +1,15 @@
 
-    import React, { useEffect } from 'react';
+    import React, { useEffect, useRef } from 'react';
     import { useLocation } from 'react-router-dom';
     import { motion } from 'framer-motion';
-    import { Building2, Car, Truck, Utensils, Gem, ArrowRight } from 'lucide-react';
+    import { Building2, Car, Utensils, Gem, ArrowRight } from 'lucide-react';
     import { Button } from '@/components/ui/button';
     import { useLanguage } from '@/i18n';
 
     const ServicesPage = () => {
       const location = useLocation();
-      const { t } = useLanguage();
+      const { t, language } = useLanguage();
+      const sectionRefs = useRef({});
 
       const servicesData = [
         {
@@ -37,20 +38,6 @@
             t('servicesPage.automotive_detail3'),
             t('servicesPage.automotive_detail4'),
             t('servicesPage.automotive_detail5')
-          ]
-        },
-        {
-          id: 'supply-chain',
-          title: t('servicesPage.supply_chain_title'),
-          Icon: Truck,
-          description: t('servicesPage.supply_chain_desc'),
-          imageText: "Large cargo ship in a port with cranes",
-          details: [
-            t('servicesPage.supply_chain_detail1'),
-            t('servicesPage.supply_chain_detail2'),
-            t('servicesPage.supply_chain_detail3'),
-            t('servicesPage.supply_chain_detail4'),
-            t('servicesPage.supply_chain_detail5')
           ]
         },
         {
@@ -100,13 +87,19 @@
       };
 
       useEffect(() => {
-        if (location.hash) {
-          const element = document.getElementById(location.hash.substring(1));
+        const hash = location.hash;
+        if (hash) {
+          const elementId = hash.substring(1);
+          const element = sectionRefs.current[elementId];
           if (element) {
-            element.scrollIntoView({ behavior: 'smooth' });
+            setTimeout(() => {
+              element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }, 150); 
           }
+        } else {
+          window.scrollTo(0,0);
         }
-      }, [location]);
+      }, [location.pathname, location.hash, language, t]); 
       
       const renderRichText = (translationKey, replacements) => {
         const rawText = t(translationKey, replacements);
@@ -125,7 +118,6 @@
           return part;
         });
       };
-
 
       return (
         <div className="space-y-16 md:space-y-24">
@@ -154,6 +146,7 @@
               <motion.section
                 key={service.id}
                 id={service.id}
+                ref={el => sectionRefs.current[service.id] = el}
                 className={`py-12 md:py-16 rounded-xl shadow-medium overflow-hidden ${index % 2 === 0 ? 'bg-white dark:bg-gray-800' : 'bg-gray-50 dark:bg-gray-800/50'}`}
                 variants={fadeIn}
               >
@@ -167,7 +160,7 @@
                       transition={{ duration: 0.7 }}
                     >
                       <div className="relative aspect-video rounded-lg overflow-hidden shadow-lg">
-                        <img  className="w-full h-full object-cover" alt={service.title} src="https://images.unsplash.com/photo-1697256200022-f61abccad430" />
+                        <img  className="w-full h-full object-cover" alt={service.imageText} src="https://images.unsplash.com/photo-1675023112817-52b789fd2ef0" />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
                         <div className="absolute bottom-4 left-4 p-2 bg-black/50 rounded">
                            <service.Icon className="h-10 w-10 text-white" />

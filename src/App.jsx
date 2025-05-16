@@ -9,8 +9,6 @@
     const HomePage = lazy(() => import('@/pages/HomePage'));
     const AboutPage = lazy(() => import('@/pages/AboutPage'));
     const ServicesPage = lazy(() => import('@/pages/ServicesPage'));
-    const ProjectsPage = lazy(() => import('@/pages/ProjectsPage'));
-    const ProjectDetailPage = lazy(() => import('@/pages/ProjectDetailPage'));
     const BlogPage = lazy(() => import('@/pages/BlogPage'));
     const ContactPage = lazy(() => import('@/pages/ContactPage'));
     const NotFoundPage = lazy(() => import('@/pages/NotFoundPage'));
@@ -36,8 +34,6 @@
                 <Route path="/" element={<HomePage />} />
                 <Route path="/about" element={<AboutPage />} />
                 <Route path="/services" element={<ServicesPage />} />
-                <Route path="/projects" element={<ProjectsPage />} />
-                <Route path="/projects/:projectId" element={<ProjectDetailPage />} />
                 <Route path="/blog" element={<BlogPage />} /> 
                 <Route path="/contact" element={<ContactPage />} />
                 <Route path="*" element={<NotFoundPage />} />

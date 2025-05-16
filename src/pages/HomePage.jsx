@@ -4,9 +4,10 @@
     import HeroSection from '@/components/home/HeroSection';
     import AboutPreviewSection from '@/components/home/AboutPreviewSection';
     import ServicesHighlightSection from '@/components/home/ServicesHighlightSection';
-    import FeaturedProjectsSection from '@/components/home/FeaturedProjectsSection';
     import WhyPartnerSection from '@/components/home/WhyPartnerSection';
     import ContactCtaSection from '@/components/home/ContactCtaSection';
+    import TestimonialsSection from '@/components/home/TestimonialsSection'; 
+    import StatsSection from '@/components/home/StatsSection';
 
     const HomePage = () => {
       const fadeIn = {
@@ -29,9 +30,10 @@
           <motion.div initial="hidden" animate="visible" variants={staggerContainer}>
             <motion.div variants={fadeIn}><HeroSection /></motion.div>
             <motion.div variants={fadeIn}><AboutPreviewSection /></motion.div>
-            <motion.div variants={fadeIn}><ServicesHighlightSection /></motion.div>
-            <motion.div variants={fadeIn}><FeaturedProjectsSection /></motion.div>
+            <motion.div variants={fadeIn}><ServicesHighlightSection displayAll={false} /></motion.div>
+            <motion.div variants={fadeIn}><StatsSection /></motion.div>
             <motion.div variants={fadeIn}><WhyPartnerSection /></motion.div>
+            <motion.div variants={fadeIn}><TestimonialsSection /></motion.div>
             <motion.div variants={fadeIn}><ContactCtaSection /></motion.div>
           </motion.div>
         </div>
